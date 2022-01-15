@@ -599,8 +599,12 @@ link:hover {
   width: 100vw;
   height: 100vh;
   top: 0;
-  /* left: 0; */
 }
+
+.modal-backdrop.is-hidden > .modal-window {
+  transform: translateX(-100vw);
+}
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -617,6 +621,10 @@ link:hover {
   height: 581px;
   background-color: #fff;
   padding: 8px;
+
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-fun);
+  transition-property: transform opacity;
 }
 
 .modal-close-buttom {
